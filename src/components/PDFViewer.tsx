@@ -23,8 +23,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
     const observer = new ResizeObserver((entries) => {
       const entry = entries[0];
       if (entry) {
-        // Submit the width minus padding (32px roughly for p-4)
-        // We measure the container and ensure the PDF fits comfortably
+       
         setContainerWidth(entry.contentRect.width);
       }
     });
