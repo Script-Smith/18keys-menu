@@ -7,7 +7,6 @@ import PDFErrorMessage from './PDFErrorMessage';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-// Set up the worker for PDF.js
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
