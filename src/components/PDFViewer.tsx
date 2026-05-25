@@ -7,7 +7,6 @@ import PDFErrorMessage from './PDFErrorMessage';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-// Set up the worker for PDF.js
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
@@ -23,8 +22,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ pdfUrl }) => {
     const observer = new ResizeObserver((entries) => {
       const entry = entries[0];
       if (entry) {
-        // Submit the width minus padding (32px roughly for p-4)
-        // We measure the container and ensure the PDF fits comfortably
+       
         setContainerWidth(entry.contentRect.width);
       }
     });
